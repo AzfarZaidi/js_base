@@ -33,7 +33,45 @@ var bio = {
 bio.city = "Mountain View";
 bio.email = "saw@synw.com";
 
-$("#main").append(bio.city);
+// var workObject = {
+// 	"position" : "Coder",
+// 	"employer" : "Spaceship",
+// 	"years" : "5",
+// 	"city" : "SOL98"
+// };
+
+var work = {};
+work.position = "Coder";
+work.employer = "Spaceship";
+work.years = 0.8;
+work.city = "SOL98";
+
+var education = {
+	"school" : [
+		{
+			"name" : "MIT",
+			"city" : "Boston, MA",
+			"degree" : "BA",
+			"attended years" : ["CompSi", "Electrical Engineering"]
+		},
+		{
+			"name" : "Oxford",
+			"city" : "Cambridge, US",
+			"degree" : "Masters",
+			"major" : ["Finance", "Philosophy"]
+		}
+	]
+}
+
+// var education = {};
+// education["name"] = "Dex";
+// education["years"] = "2016 - 2018";
+// education["city"] = "Boston, MA";
+
+$("#main").append(work["position"]);
+$("#main").append(education.name)
+
+// $("#main").append(bio.city);
 
 bio["vehicle"] = "Flying-car";
 
