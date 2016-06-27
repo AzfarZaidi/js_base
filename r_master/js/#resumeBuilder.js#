@@ -64,7 +64,7 @@ var projects = {
 			"dates": "2016",
 			"description": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui.",
 			"images": [
-				"https://cdn2.vox-cdn.com/thumbor/ZZvbt9rKm0n1aRSTSMaKsyM1nBQ=/1020x0/cdn0.vox-cdn.com/uploads/chorus_asset/file/2847410/2-spaceship.1402634711.jpg"
+				""
 			]
 		}
 	]
