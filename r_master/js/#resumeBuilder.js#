@@ -64,12 +64,7 @@ var projects = {
 			"dates": "2016",
 			"description": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui.",
 			"images": [
-				""
-			]
-		}
-	]
-}
-
+				"https://cdn2.vox-cdn.com/thumb
 // var name = bio.name;
 // var formattedName = HTMLheaderName.replace("%data%", name);
 

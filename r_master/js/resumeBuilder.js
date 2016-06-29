@@ -14,7 +14,7 @@ var bio = {
 }
 
 var education = {
-	"school" : [
+	"schools" : [
 		{
 			"name" : "MIT",
 			"city" : "Boston, MA",
@@ -168,3 +168,5 @@ projects.display = function() {
 }
 
 projects.display();
+
+$("#mapDiv").append(googleMap);
