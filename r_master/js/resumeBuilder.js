@@ -9,7 +9,7 @@ var bio = {
 		"location" : "New York"
 	}],
 	"skills" : [ "awesomeness", "saving the universe", "coding", "maths" ],
-	"picutre" : "http://static1.comicvine.com/uploads/scale_super/6/66303/4469093-screen+shot+2015-03-25+at+5.13.24+pm+copy.jpg",
+	"picutre" : "https://pbs.twimg.com/profile_images/686425525032632320/D6_xAbDK.jpg",
 	"welcomeMsg" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
 };
 
@@ -109,25 +109,18 @@ education.display = function() {
   }
 };
 
-function displayWork() {
-	for (job in work.jobs) {
+work.display = function() {
+	for(job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
+		
+		var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
+		var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
+		var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
 
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-
-		$(".work-entry:last").append(formattedEmployerTitle);
-
-		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		$(".work-entry:last").append(formattedDates);
-
-		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$(".work-entry:last").append(formattedDescription);
+		$(".work-entry:last").append(formattedEmployer + formattedTitle,formattedDates,formattedDescription);
 	}
 };
-
-displayWork();
 
 projects.display = function() {
 	for (project in projects.projects) {
@@ -153,6 +146,7 @@ projects.display = function() {
 
 bio.display();
 education.display();
+work.display();
 projects.display();
 
 $("#mapDiv").append(googleMap);
